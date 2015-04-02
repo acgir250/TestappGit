@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Testapp</string>
+    <string name="testapp_autocomplete">Enter the name of the city</string>
+    <string name="testapp_button">Fill data in dropdown menu</string>
+    <string name="testapp_callingbutton">Calling another activity</string>
+    <string name="testapp_Textview">View Flip</string>
+    <string name="testapp_firstname_textview">Firstname</string>
+    <string name="testapp_middlename_textview">Middlename</string>
+    <string name="testapp_lastname_textview">lastanem</string>
+    <string name="testapp_customlist">Call Customlist</string>
+    <string name="title_activity_sql_lite_database">SqlLiteDatabaseActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="testapp_firstname">Firstname</string>
+    <string name="testapp_erno">Enrollent no</string>
+    <string name="testapp_middlename">middlename</string>
+    <string name="testapp_lastname">lastname</string>
+    <string name="testapp_data_insert">Insert</string>
+    <string name="testapp_data_update">Update</string>
+    <string name="testapp_data_delete">Delete</string>
+    <string name="title_activity_async">AsyncActivity</string>
+    <string name="testapp_httpurl_connection">HttpUrlConnection</string>
+    <string name="title_activity_gcm_">GCM_Activity</string>
+    <string name="gcm_register">GetRegID</string>
+
+</resources>
