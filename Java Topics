@@ -1,0 +1,69 @@
+Core java 
+
+Classes & Object
+	Static member 
+	intializatier block
+	deep copy vs shallow copy
+	overiding vs overloading
+	abstract vs inheritance
+	typecasting
+	enums and wrapperclasses
+
+
+String 
+	String intern
+	How to create immutable class in java
+	how many instance create when we concat a string
+        when to use "==", equals and hashcode on strings
+        string vs string builder vs stringbuffer
+
+Exception handling
+	throw vs throws
+	checked vs unchecked exception
+	user defined exception
+	exceptions vs error
+	chained exception
+	hierarchy of exception 
+
+
+Collection
+ 	Collection vs collectors
+ 	Collectio vs Collections
+	 Arraylist vs vector
+	 how arraylist works internally
+	 Consutructor of arraylist
+	 hashtable vs hashmap
+	 how hashmap works internally
+	 hashset vs hashmap 
+	 how hashset works internally
+	 Treeset vs treemap
+	 how treemap works internally
+	 overide hashcode and equals
+	 how custom object in the pojo works for hashset object
+	 SortedMap
+	 Comparable vs Comparator
+	 failfast vs failsafe iterator
+
+Thread & Concurrency
+	Thread vs process
+	Thread lifecycle 
+	Ways of using thread
+	sleep,join,yield method
+	volatile variable
+	atomic variable
+	Lock & Reentrant Lock
+	Object level vs class level locking
+	Detect Deadlock & Avoid Deadlock in java 
+	InterThread communication 
+	wait,notify,notifyall 
+	Thread.interupt
+	wait vs sleep
+	Daemon Thread
+	Callable vs Runnable
+	blocked vs waiting states
+	start vs run
+	synchornized block vs synchornized method
+	Callable and Future
+
+
+
