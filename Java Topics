@@ -74,4 +74,40 @@ Thread & Concurrency
 	Binary semaphore
 	blocking queue
 	countdown latch,cyclic barrier
-	forkjoinpool
+
+Java 8
+	Changes in interface
+	Solving diamond problem interface
+	changes in hashmap
+	String joiners
+	functional interface
+	Default fuctions in java Predicate,
+	Consumer,Function,Supplier,BiPredicate,BiConsumer,BiFunction,UnaryOperator,Binary Operator
+	Lambda expression
+	Default method
+	Streams
+	Date/Time api changes
+
+Spring
+	spring modules
+	flow of spring webmvc
+	IOC Container
+	Dependency Injection
+	Autowiring
+	Types of autowiring
+	Type of application context (AnnotationConfigApplicationContext,ClassPathXmlApplication,FileSystemXmlApplication,AnnotationConfigWebApplicationContext
+	Spring bean
+	Spring bean lifecycle
+	Configuring a spring bean
+	scopes of spring bean
+	spring bean life cycle
+	@Component, @Controller, @Repository & @Service
+	@Qualifier @Bean 
+	SpringMvc Exception - ControllerBased,GlobalExceptionHandler,HandlerExceptionResolver.
+	Spring transaction Programmatic vs Declarative transaction transction management
+	Spring-data-jpa is a data access abstraction layer
+	The goal of Spring Data repository abstraction is to significantly reduce the amount of boilerplate code required to implement data access layers for various persistence stores.	
+	ViewResolver class is widely used
+	Name some of the design patterns used in Spring Framework?
+	what is springboot?
+	@Springboot vs @AutoConfiguration,@ComponentScan
