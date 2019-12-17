@@ -45,6 +45,7 @@ Collection
 	 failfast vs failsafe iterator
 
 Thread & Concurrency
+	Semaphore, mutual exclusion
 	Thread vs process
 	Thread lifecycle 
 	Ways of using thread
@@ -62,8 +63,15 @@ Thread & Concurrency
 	Callable vs Runnable
 	blocked vs waiting states
 	start vs run
+	synchronized keyword
 	synchornized block vs synchornized method
 	Callable and Future
-
-
-
+	Thread Safety
+	Thread local variable
+	Excecutor service
+	Thread Pool Executor
+	Fixed size Thread pool executor
+	Binary semaphore
+	blocking queue
+	countdown latch,cyclic barrier
+	forkjoinpool
