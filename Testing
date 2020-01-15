@@ -1,0 +1,476 @@
+Rakuten  Sports SponsorShip
+
+
+Rakuten FC Barcelona
+Rakuten Golden State Warriors
+Rakuten Open Tennis Championship
+
+Services : 
+
+
+Commerce Company : 
+
+Rakuten Ichiba :Internet shopping mall
+
+Rakuten Travel : Online travel and reservation website
+
+Rakuten Books : Online book, CD & DVD store
+
+Rakuten GORA : Online golf course reservations
+
+Rakuma :Consumer-to-consumer mobile e-commerce app
+
+Rakuten Fashion : Online brand fashion store
+
+Rakuten Stay : Accommodation facilities brand for vacation rentals
+
+Rakuten Rebates : A point-back service offering Rakuten Super Points for shopping on various affiliated official online stores
+
+Rakuten Drone : Drone / UGV Delivery Service
+
+Rakuten Rewards : Membership-based online cash-back site in the U.S.
+
+
+Communication & Energy 
+
+Rakuten Communication :Telecommunications Provider 
+
+Rakuten Viber  : Global Mobile Messaging Service 
+
+
+Media & Sport Company 
+
+
+Rakuten TV  :  Video distribution service in Japan
+
+
+Rakuten Live   :   Live video streaming service
+
+
+
+
+Fintech group
+
+Rakuten Pay  :  Rakuten ID-based offline payment service
+
+Rakuten Point card  :Point card service
+
+Rakuten Insurance : Online comprehensive insurance
+
+
+Investment & incubation  Company :
+
+
+Rakuten Drone :  Delivery service utilizing drones
+
+Rakuten Super English :   English language learning services
+
+
+
+Running the java  jar on linux
+
+
+$ sudo useradd Girish
+$ sudo passwd  Giri
+$ sudo chown Girish:Girish SpringBoot.jar
+$ sudo chmod 500 SpringBoot.jar
+
+
+How do I run .sh files in Linux?
+
+
+chmod +x script-name-here.sh
+
+./script-name-here.sh
+
+sh script-name-here.sh
+OR
+bash script-name-here.sh
+
+
+https://stackoverflow.com/questions/22886083/how-do-i-run-a-spring-boot-executable-jar-in-a-production-environment
+
+
+SDLC :
+
+WaterFall Model : linear-sequential life cycle model. : Requirement Analysis ,System Desing,Implementation,Testing,Deployment,Maintnance.
+
+Iterative Model :  Iterative process starts with a simple implementation of a subset of the software requirements and iteratively enhances the evolving versions until the full system is implemented.
+
+Agile : Agile model believes that every project needs to be handled differently and the existing methods need to be tailored to best suit the project requirements
+
+Scrum ,Kanban,	Xtreme Programming,Feature Driven Develpement
+
+
+
+Code  Review tools
+
+Jacococ : Code Coverage tools
+Sonar Qube : Static code analysis  Continous Code Quality
+Junit for test cases : @BeforeClass,@AfterClass    https://www.guru99.com/junit-annotations-api.html
+
+
+
+Java 8 
+
+Interface changes : 
+
+Default Method  and static method 
+
+
+Rule 1 : Select classes over interfaces
+Rule 2 : Select most specific interfaces than general interfaces.
+
+interface InterfaceOne
+{
+    default void anyMethod()
+    {
+        System.out.println("Hi... From Interface One");
+    }
+}
+ 
+interface InterfaceTwo extends InterfaceOne
+{
+    @Override
+    default void anyMethod() 
+    {
+        System.out.println("Hi... From Interface Two");
+    }
+}
+ 
+public class MyClass implements InterfaceOne, InterfaceTwo
+{
+    public static void main(String[] args) 
+    {
+        new MyClass().anyMethod();
+    }
+}
+
+
+
+Rule 3 : InterfaceName.super.methodName()
+
+
+
+interface InterfaceOne
+{
+    default void anyMethod()
+    {
+        System.out.println("Hi... From Interface One");
+    }
+}
+ 
+interface InterfaceTwo 
+{
+    default void anyMethod() 
+    {
+        System.out.println("Hi... From Interface Two");
+    }
+}
+ 
+public class MyClass implements InterfaceOne, InterfaceTwo
+{
+    @Override
+    public void anyMethod()
+    {
+        InterfaceOne.super.anyMethod();
+    }
+     
+    public static void main(String[] args) 
+    {
+        new MyClass().anyMethod();
+    }
+}
+
+Why Static Methods?
+Do you know? Collection and Collections.
+
+Collection is an interface and Collections is an utility class containing only static methods which operate on Collection objects.
+
+Java API developers have followed this pattern of supplying an utility class along with an interface to perform basic operations on such objects. But from Java 8, they have break this pattern by introducing static methods to interfaces.
+
+
+Lambda expression : 
+
+Java 8 Lambda Expressions can be defined as methods without names i.e anonymous functions. Like methods, they can have parameters, a body, a return type and possible list of exceptions that can be thrown. But unlike methods, neither they have names nor they are associated with any particular class.
+
+Where To Use Lambda Expressions?
+
+Lambda expressions are used where an instance of functional interface is expected. Functional interface is an interface which has only one abstract method. Functional interfaces can have any number of default methods. But, they must have only one abstract method. Comparator, Runnable AndActionListener are some examples of functional interfaces.
+
+@FunctionalInterface
+public interface Comparator 
+{
+    int compare(T o1, T o2);       //Only one abstract method
+}
+ 
+@FunctionalInterface
+public interface Runnable 
+{
+    public abstract void run();   //Only one abstract method
+}
+ 
+@FunctionalInterface
+public interface ActionListener extends EventListener 
+{
+    public void actionPerformed(ActionEvent e);  //Only One abstract method
+}
+
+
+Functional Interfaces :
+
+
+Functional interfaces are the interfaces which has exactly one abstract method. They may have any number of default methods but must have only one abstract method. Functional interfaces provide only one functionality to implement.
+
+The new set of functional interfaces are introduced in Java 8 to make programmer’s job easy while writing lambda expressions. Your lambda expression must implement any one of these functional interfaces. These new functional interfaces are organised under java.util.function package.
+
+for java.util.function
+https://i0.wp.com/javaconceptoftheday.com/wp-content/uploads/2019/03/Java8FunctionalInterfaces.png?ssl=1
+
+List of <Students> 
+
+
+Predicate<Student> mathematicsPredicate = (Student student) -> student.getSpecialization().equals("Mathematics");
+         
+List<Student> mathematicsStudents = new ArrayList<Student>();
+         
+for (Student student : listOfStudents) 
+{
+    if (mathematicsPredicate.test(student)) 
+    {
+        mathematicsStudents.add(student);
+    }
+}
+
+
+conusmer returns nothing 
+
+Consumer<Student> percentageConsumer = (Student student) -> {
+        System.out.println(student.getName()+" : "+student.getPercentage());
+    };
+         
+for (Student student : listOfStudents) 
+{
+    percentageConsumer.accept(student);
+}
+
+
+Function – Applies to an object
+
+Function represents an operation which takes an argument of type T and returns a result of type R. Use this functional interface if you want to extract some data from an existing data.
+
+Function<Student, String> nameFunction = (Student Student) -> Student.getName();
+         
+List<String> studentNames = new ArrayList<String>();
+         
+for (Student student : listOfStudents) 
+{
+    studentNames.add(nameFunction.apply(student));
+}
+
+
+Supplier represents an operation which takes no argument and returns the results of type R. Use this functional interface when you want to create new objects.
+
+
+Supplier<Student> studentSupplier = () -> new Student(111111, "New Student", 92.9, "Java 8");
+         
+listOfStudents.add(studentSupplier.get());
+
+
+Java 8 Method References :
+
+
+Method reference to static method
+
+        Function<String, Integer> referenceFunction = Integer::parseInt;
+		
+Method reference to instance method (ClassName::MethodName)
+
+Method reference to instance method (ReferenceVariable::MethodName)
+
+
+Java 8 Streams
+1) What Are Streams?
+  Streams can be defined as a sequences of elements from a source which support data processing operations. You can treat streams as operations on data. You will get to know as you go through this article
+  
+  2) Why Streams?
+Almost every Java application use Collections API to store and process the data. Despite being the most used Java API, it is not easy to write the code for even some common data processing operations like filtering, finding, matching, sorting, mapping etc using Collections API . So, there needed Next-Gen API to process the data. So Java API designers have come with Java 8 Streams API to write more complex data processing operations with much of ease.
+
+Intermediate And Terminal Operations
+Most of the stream operations return another new stream and they can be chained together to form a pipeline of operations.
+
+The operations which return stream themselves are called intermediate operations. For example – filter(), distinct(), sorted() etc.
+
+The operations which return other than stream are called terminal operations. count(). min(), max() are some terminal operations.
+
+ Short Circuiting Operations
+Short circuiting operations are the operations which don’t need the whole stream to be processed to produce a result. For example – findFirst(), findAny(), limit() etc.
+
+
+Stream function :
+
+filter(): Retruns a stream of  elements which satisfy  the given predicate
+ List<String> result = lines.stream()                // convert list to stream
+                .filter(line -> !"mkyong".equals(line))     // we dont like mkyong
+                .collect(Collectors.toList());     
+				
+Map():  Returns a stream consisting  of results after applying given function to elements of stream
+ List<String> collect = alpha.stream().map(String::toUpperCase).collect(Collectors.toList());
+
+sorted :  Returns a stream consisting  of elements sorted according to natural roder 
+
+List<Student> slist = list.stream().sorted().collect(Collectors.toList());
+slist = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+slist = list.stream().sorted(Comparator.comparing(Student::getAge)).collect(Collectors.toList());
+System.out.println("---Sorting using Comparator by Age with reverse order---");
+slist = list.stream().sorted(Comparator.comparing(Student::getAge).reversed()).collect(Collectors.toList());
+
+Map Sorting 
+
+  map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue))
+	          .forEach(e -> System.out.println("Key: "+ e.getKey() +", Value: "+ e.getValue()));
+
+		System.out.println("---Sort by Map Key---");
+	        map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey))
+
+
+toArray :  Returns an array containgin elements of stream
+
+        String[] result = Arrays.stream(lines.split("\\s+"))
+			.map(String::toUpperCase)
+			.toArray(String[]::new);
+			
+findfirst :  Returns  first elements of stream wrapped in an Optional Object.
+
+
+    Optional<String> result = list.stream().findFirst();
+	
+	
+	Map & flat Map
+	
+	map() does only mapping, but flatMap() performs mapping as well as flattening. Flattening means transforming data from Stream<Stream<T>> to Stream<T>. This is the main difference between map() and flatMap().
+
+
+
+String.join & Collectors.join()
+
+public class Java8CollectorsJoining 
+{
+    public static void main(String[] args) 
+    {
+        List<String> listOfStrings = Arrays.asList("Facebook", "Twitter", "YouTube", "WhatsApp", "LinkedIn");
+         
+        String joinedString = listOfStrings.stream().collect(Collectors.joining(", ", "[", "]"));
+         
+        System.out.println(joinedString);
+    }
+}
+
+ StringJoiner stringJoiner = new StringJoiner(" | ");
+         
+        stringJoiner.add("Facebook");
+         
+        stringJoiner.add("Twitter");
+         
+        stringJoiner.add("YouTube");
+         
+        stringJoiner.add("WhatsApp");
+         
+        stringJoiner.add("LinkedIn");
+         
+        System.out.println(stringJoiner);
+
+public class Java8StringJoinMethod 
+{
+    public static void main(String[] args) 
+    {
+        String[] strArray = new String[] {"Facebook", "Twitter", "YouTube", "WhatsApp", "LinkedIn"};
+         
+        String joinedString = String.join(" | ", strArray);
+         
+        System.out.println(joinedString);
+    }
+}
+
+
+
+Extra Feautres to learn :
+
+
+Apache Hive is a data warehouse system built on top of Apache Hadoop that facilitates easy data summarization, ad-hoc queries, and the analysis of large datasets stored in various databases and file systems that integrate with Hadoop, including the MapR Data Platform with MapR XD and MapR Database. Hive offers a simple way to apply structure to large amounts of unstructured data and then perform batch SQL-like queries on that data. Hive easily integrates with traditional data center technologies using the familiar JDBC/ODBC interface.
+
+
+Apache Cassendra 
+
+What is Cassandra?
+The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure make it the perfect platform for mission-critical data. Cassandra's support for replicating across multiple datacenters is best-in-class, providing lower latency for your users and the peace of mind of knowing that you can survive regional outages.
+
+
+Ideal Cassandra Use Cases
+It turns out that Cassandra is really very good for some applications.
+
+The ideal Cassandra application has the following characteristics:
+
+Writes exceed reads by a large margin.
+Data is rarely updated and when updates are made they are idempotent.
+Read Access is by a known primary key.
+Data can be partitioned via a key that allows the database to be spread evenly across multiple nodes.
+There is no need for joins or aggregates.
+Some of my favorite examples of good use cases for Cassandra are:
+
+Transaction logging: Purchases, test scores, movies watched and movie latest location.
+Storing time series data (as long as you do your own aggregates).
+Tracking pretty much anything including order status, packages etc.
+Storing health tracker data.
+Weather service history.
+Internet of things status and event history.
+Telematics: IOT for cars and trucks.
+Email envelopes—not the contents.
+
+
+Maven :
+
+
+A Build Lifecycle is Made Up of Phases
+Each of these build lifecycles is defined by a different list of build phases, wherein a build phase represents a stage in the lifecycle.
+
+For example, the default lifecycle comprises of the following phases (for a complete list of the lifecycle phases, refer to the Lifecycle Reference):
+
+
+Maven Phases : 
+validate - validate the project is correct and all necessary information is available
+compile - compile the source code of the project
+test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+package - take the compiled code and package it in its distributable format, such as a JAR.
+verify - run any checks on results of integration tests to ensure quality criteria are met
+install - install the package into the local repository, for use as a dependency in other projects locally
+deploy - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+
+
+Maven Goal 
+Each phase is a sequence of goals, and each goal is responsible for a specific task.
+
+When we run a phase – all goals bound to this phase are executed in order.
+
+Here are some of the phases and default goals bound to them:
+
+compiler:compile – the compile goal from the compiler plugin is bound to the compile phase
+compiler:testCompile is bound to the test-compile phase
+surefire:test is bound to test phase
+install:install is bound to install phase
+jar:jar and war:war is bound to package phase
+
+
+Microservices design princnples 
+
+
+https://dzone.com/articles/design-patterns-for-microservices
+
+
+Spring bean lifecycle
+https://howtodoinjava.com/spring-core/spring-bean-life-cycle/
+
+Spring ANnotations
+https://springframework.guru/spring-framework-annotations/
+https://www.javatpoint.com/spring-boot-annotations
