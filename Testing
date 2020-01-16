@@ -26,7 +26,6 @@ Rakuten Stay : Accommodation facilities brand for vacation rentals
 
 Rakuten Rebates : A point-back service offering Rakuten Super Points for shopping on various affiliated official online stores
 
-Rakuten Drone : Drone / UGV Delivery Service
 
 Rakuten Rewards : Membership-based online cash-back site in the U.S.
 
@@ -243,11 +242,12 @@ for (Student student : listOfStudents)
 }
 
 
-conusmer returns nothing 
+consumer returns nothing 
 
 Consumer<Student> percentageConsumer = (Student student) -> {
+
         System.out.println(student.getName()+" : "+student.getPercentage());
-    };
+};
          
 for (Student student : listOfStudents) 
 {
@@ -261,7 +261,7 @@ Function represents an operation which takes an argument of type T and returns a
 
 Function<Student, String> nameFunction = (Student Student) -> Student.getName();
          
-List<String> studentNames = new ArrayList<String>();
+List<String> studentNames = new ArrayLis t<String>();
          
 for (Student student : listOfStudents) 
 {
@@ -317,7 +317,7 @@ filter(): Retruns a stream of  elements which satisfy  the given predicate
 Map():  Returns a stream consisting  of results after applying given function to elements of stream
  List<String> collect = alpha.stream().map(String::toUpperCase).collect(Collectors.toList());
 
-sorted :  Returns a stream consisting  of elements sorted according to natural roder 
+sorted :  Returns a stream consisting  of elements sorted according to natural order 
 
 List<Student> slist = list.stream().sorted().collect(Collectors.toList());
 slist = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
@@ -474,3 +474,32 @@ https://howtodoinjava.com/spring-core/spring-bean-life-cycle/
 Spring ANnotations
 https://springframework.guru/spring-framework-annotations/
 https://www.javatpoint.com/spring-boot-annotations
+
+IOC 
+https://www.tutorialsteacher.com/ioc/introduction
+https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring
+
+
+Reactive programming
+
+Responsive: meaning that they respond in a timely manner, in all possible circumstances. They focus on providing rapid and consistent response times, establishing reliable upper bounds so they deliver a consistent quality of service.
+
+
+Resilient:  meaning that they remain responsive in the face of failure. Resilience is achieved by the techniques of replication, containment, isolation, and delegation. By isolating application components from each other, you can contain failures and protect the system as a whole.
+
+Elastic: meaning that they stay responsive under varying workloads. This is achieved by scaling application components elastically to meet the      current demand.
+
+
+Message-driven :  meaning that they rely on asynchronous message passing between components. This allows you to create loose coupling, isolation, and location transparency.
+
+
+
+
+Spring MVC  vs WebFlux
+
+Both Spring MVC and Spring WebFlux support client-server architecture but there is a key difference in the concurrency model and the default behavior for blocking nature and threads. In Spring MVC, it is assumed that applications can block the current thread while in webflux, threads are non-blocking by default. It is the main difference between spring webflux vs mvc.
+
+Reactive and non-blocking generally do not make applications run faster. The expected benefit of reactive and non-blocking is the ability to scale the application with a small, fixed number of threads and lesser memory requirements. It makes applications more resilient under load because they scale in a more predictable manner.
+
+
+https://blog.panoply.io/cassandra-vs-mongodb
