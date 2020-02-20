@@ -1,0 +1,26 @@
+An Interview questions on spring singletons
+
+https://dzone.com/articles/an-interview-question-on-spring-singletons
+
+String immutable in java
+https://javarevisited.blogspot.com/2010/10/why-string-is-immutable-or-final-in-java.html
+https://www.journaldev.com/802/string-immutable-final-java
+https://stackoverflow.com/questions/8798403/string-is-immutable-what-exactly-is-the-meaning
+
+why wait and notify methods are in object classes
+https://java2blog.com/why-wait-notify-notifyall-methods-object-class/
+https://www.devglan.com/corejava/why-wait-notify-notifyall-defined-in-object-class
+
+Semaphore Class in java
+
+https://www.geeksforgeeks.org/java-util-concurrent-semaphore-class-java/
+
+
+Difference between wait vs sleep in java
+
+https://howtodoinjava.com/java/multi-threading/sleep-vs-wait/
+
+Difference between cyclic barrier and count down latch
+
+https://javahungry.blogspot.com/2018/08/difference-between-countdownlatch-and-cyclicbarrier-in-java.html
+
